@@ -1,0 +1,13 @@
+class Ticket implements Runnable {
+    public void run() {
+        System.out.println("Ticket Booked by " + Thread.currentThread().getName());
+    }
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Ticket());
+        Thread t2 = new Thread(new Ticket());
+
+        t1.start();
+        t2.start();
+    }
+}
