@@ -1,0 +1,14 @@
+class Shopping {
+    double calculateBill(double amount) {
+        if (amount > 5000)
+            return amount * 0.9; // 10% discount
+        else
+            return amount;
+    }
+
+    public static void main(String[] args) {
+        Shopping s = new Shopping();
+        double bill = s.calculateBill(6000);
+        System.out.println("Final Bill: " + bill);
+    }
+}
