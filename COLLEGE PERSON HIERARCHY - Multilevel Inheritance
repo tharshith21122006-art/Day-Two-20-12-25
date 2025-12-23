@@ -1,0 +1,19 @@
+class Person {
+    void showPerson() {
+        System.out.println("Person");
+    }
+}
+
+class Student extends Person {
+    void showStudent() {
+        System.out.println("Student");
+    }
+}
+
+class CollegeStudent extends Student {
+    public static void main(String[] args) {
+        CollegeStudent cs = new CollegeStudent();
+        cs.showPerson();
+        cs.showStudent();
+    }
+}
