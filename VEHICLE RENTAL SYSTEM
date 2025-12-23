@@ -1,0 +1,25 @@
+abstract class Vehicle {
+    abstract void rentPerDay();
+}
+
+class Bike extends Vehicle {
+    void rentPerDay() {
+        System.out.println("Bike Rent: 300/day");
+    }
+}
+
+class Car extends Vehicle {
+    void rentPerDay() {
+        System.out.println("Car Rent: 1000/day");
+    }
+}
+
+class RentalSystem {
+    public static void main(String[] args) {
+        Vehicle v1 = new Bike();
+        Vehicle v2 = new Car();
+
+        v1.rentPerDay();
+        v2.rentPerDay();
+    }
+}
