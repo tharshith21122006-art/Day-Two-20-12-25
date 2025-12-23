@@ -1,0 +1,13 @@
+class ATMThread extends Thread {
+    public void run() {
+        System.out.println("Transaction in progress: " + Thread.currentThread().getName());
+    }
+
+    public static void main(String[] args) {
+        ATMThread t1 = new ATMThread();
+        ATMThread t2 = new ATMThread();
+
+        t1.start();
+        t2.start();
+    }
+}
